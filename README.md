@@ -1,6 +1,6 @@
 # Koala
 
-An amazing bug bounty toolkit for Docker.
+An amazing bug bounty toolkit for Docker written in Bash.
 
 ## Instructions
 
@@ -13,25 +13,31 @@ An amazing bug bounty toolkit for Docker.
 
 ### Installation
 
-```
+```bash
 git clone https://github.com/tun43p/koala.git
-cd koala/bin/
-chmod +x install.sh
-./install.sh
 ```
 
 ### Utilisation
 
-`koala` : Run Koala Toolkit <br/>
-`koala -b` : Build <br/>
-`koala -e` : Edit Dockerfile <br/>
-`koala -h` : Print help <br/>
-`koala -k` : Kill containers <br/>
-`koala -r` : Remove containers<br/>
-`koala -R` : Remove containers and image <br />
-`koala -u` : Upgrade Koala <br />
-`koala -uninstall` : Uninstall Koala <br />
-`koala -v` : Print current version
+- `koala -b` : Build
+- `koala -e` : Edit Dockerfile
+- `koala -h` : Print help
+- `koala -k` : Kill containers
+- `koala -r` : Remove container
+- `koala -R` : Remove container and images
+- `koala -s` : Start Koala toolkit
+- `koala -u` : Upgrade Koala
+- `koala -v` : Print current version
+
+### Example
+
+```bash
+cd ./koala
+chmod +x koala.sh
+./koala.sh -h # Show help
+./koala.sh -b # Build Docker image
+./koala.sh -s # Start Koala toolkit
+```
 
 ## Tools
 
@@ -81,7 +87,7 @@ chmod +x install.sh
 
 ## Versioning
 
-**1.0.2**
+- 1.0.3
 
 ## Authors
 
