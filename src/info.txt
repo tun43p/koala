@@ -16,7 +16,7 @@ Koala - An amazing bug bounty toolkit for Docker.
 Author : tun43p
 Repository : https://github.com/tun43p/koala.git
 
-Version : 1.0.2
+Version : 1.0.3
 
 ----- ----- ----- ----- -----
 
