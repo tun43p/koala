@@ -2,6 +2,24 @@
 
 An amazing bug bounty toolkit for Docker written in Bash.
 
+## Table of contents
+
+- [Koala](#koala)
+  - [Table of contents](#table-of-contents)
+  - [Instructions](#instructions)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Utilisation](#utilisation)
+      - [Start Koala for the first time](#start-koala-for-the-first-time)
+      - [After the first time](#after-the-first-time)
+      - [User informations](#user-informations)
+      - [Shared directory](#shared-directory)
+  - [Tools](#tools)
+  - [Tasks](#tasks)
+  - [Versioning](#versioning)
+  - [Authors](#authors)
+  - [License](#license)
+
 ## Instructions
 
 > It is obvious that this tool MUST NOT be used in a malicious context. It should only be used against your own machine or with the consent of the owner of the targeted machine. The author of **Koala** can in no way be held responsible for any malicious and unauthorized use of this script.
@@ -29,7 +47,7 @@ git clone https://github.com/tun43p/koala.git
 - `koala -u` : Upgrade Koala
 - `koala -v` : Print current version
 
-### Example
+#### Start Koala for the first time
 
 ```bash
 cd ./koala
@@ -38,6 +56,22 @@ chmod +x koala.sh
 ./koala.sh -b # Build Docker image
 ./koala.sh -s # Start Koala toolkit
 ```
+
+#### After the first time
+
+```bash
+cd ./koala
+./koala.sh -s # Start Koala toolkit
+```
+
+#### User informations
+
+- **Username**: `koala`
+- **Password**: `koala`
+
+#### Shared directory
+
+The shared directory is located in `/home/koala/shared`
 
 ## Tools
 
@@ -87,7 +121,7 @@ chmod +x koala.sh
 
 ## Tasks
 
-- [ ] Convert to Rust script.
+- [ ] Convert Bash script to Rust script.
 
 ## Versioning
 
