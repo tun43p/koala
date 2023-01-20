@@ -85,13 +85,17 @@ chmod +x koala.sh
 - [wordlists](https://tools.kali.org/password-attacks/wordlists)
 - [xsstrike](https://github.com/s0md3v/XSStrike)
 
+## Tasks
+
+- [ ] Convert to Rust script.
+
 ## Versioning
 
 - 1.0.3
 
 ## Authors
 
-**tun43p** - _Initial work_ - [tun43p](https://github.com/tun43p).
+- **tun43p** - _Initial work_ - [tun43p](https://github.com/tun43p).
 
 ## License
 
