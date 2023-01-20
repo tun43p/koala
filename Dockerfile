@@ -5,6 +5,8 @@ LABEL maintainer="tun43p <dev@tun43p.com>"
 ENV HOME /root
 WORKDIR /root
 
+RUN mkdir /root/shared
+
 RUN apt-get update && apt-get install -y \
     aircrack-ng \
     amass \
@@ -28,11 +30,11 @@ RUN apt-get update && apt-get install -y \
     metasploit-framework \
     net-tools \
     nikto \
-    netcat \
+    netcat-traditional \
     nmap \
     php \
+    python2 \
     python3 \
-    python-pip \
     python3-pip \
     recon-ng \
     responder \
@@ -53,25 +55,21 @@ RUN cd /opt && \
     pip install -r requirements.txt && \
     chmod +x setup.py && \
     python setup.py install && \
-    # ----- #
     cd /opt && \
     git clone https://github.com/blechschmidt/massdns.git && \
     cd massdns && \
     make && \
     ln -sf /opt/massdns/bin/massdns /usr/local/bin/massdns && \
-    # ----- #
     cd /opt && \
     git clone https://github.com/aboul3la/Sublist3r.git && \
     cd Sublist3r && \
     pip install -r requirements.txt && \
     ln -s /opt/Sublist3r/sublist3r.py /usr/local/bin/ && \
-    # ----- #
     cd /opt && \
     git clone https://github.com/tomdev/teh_s3_bucketeers.git && \
     cd teh_s3_bucketeers && \
     chmod +x bucketeer.sh && \
     ln -sf /opt/teh_s3_bucketeers/bucketeer.sh /usr/local/bin/bucketeer && \
-    # ----- #
     cd /opt && \
     git clone https://github.com/s0md3v/XSStrike.git && \
     cd XSStrike && \
