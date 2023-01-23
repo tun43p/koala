@@ -5,8 +5,7 @@ services:
     build: .
     image: tun43p/koala
     container_name: koala
-    ports:
-      - "1234:1234"
+    network_mode: host
     volumes:
       - ./shared/bin:/home/koala/bin
       - ./shared/lib:/home/koala/lib

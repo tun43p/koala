@@ -10,12 +10,12 @@ An amazing bug bounty toolkit for Docker written in Bash.
   - [Prerequisites](#prerequisites)
   - [Informations](#informations)
     - [Architecture](#architecture)
-    - [Packages](#packages)
+    - [Modules](#modules)
   - [Getting started](#getting-started)
   - [Installation](#installation)
     - [Update Koala](#update-koala)
     - [Build Koala](#build-koala)
-    - [Start Koala](#start-koala)
+    - [Run Koala](#run-koala)
     - [Prune Koala](#prune-koala)
     - [User informations](#user-informations)
   - [Versioning](#versioning)
@@ -37,9 +37,9 @@ An amazing bug bounty toolkit for Docker written in Bash.
 
 To see the architecture instructions, go the the [ARCHITECTURE.md](./ARCHITECTURE.md) file.
 
-### Packages
+### Modules
 
-To see the packages list, go the the [PACKAGES.md](./PACKAGES.md) file.
+To see the modules list, go the the [MODULES.md](./MODULES.md) file.
 
 ## Getting started
 
@@ -52,22 +52,48 @@ git clone https://github.com/tun43p/koala.git
 ### Update Koala
 
 ```bash
+make update
+```
+
+or
+
+```bash
 git checkout main && git pull origin main
 ```
 
 ### Build Koala
 
 ```bash
+make build
+```
+
+or
+
+```bash
 docker compose up --build -d
 ```
 
-### Start Koala
+### Run Koala
+
+```bash
+make run
+```
+
+or
 
 ```bash
 docker compose run --rm koala
 ```
 
+**You can also build and run at the same time with the** `make` **or** `make all` **commands.**
+
 ### Prune Koala
+
+```bash
+make clean
+```
+
+or
 
 ```bash
 docker compose down -v
