@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  koala:
+    build: .
+    image: tun43p/koala
+    container_name: koala
+    network_mode: host
+    volumes:
+      - ./shared/bin:/home/koala/bin
+      - ./shared/lib:/home/koala/lib
+      - ./shared/tmp:/home/koala/tmp
+    stdin_open: true
+    tty: true
