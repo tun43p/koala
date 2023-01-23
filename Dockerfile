@@ -1,16 +1,18 @@
 FROM ubuntu:latest
 
-# Update system, install packages from Ubuntu repositories
-RUN apt-get update && apt-get full-upgrade -y && apt-get install -y \
-  # Core
-  locales sudo tmux unzip vim zip \
-  # Networking
-  curl ftp iputils-ping net-tools openvpn ssh telnet \
-  # Languages
-  python3 python3-pip \
-  # Scanning
-  nmap \
-  # Brute-forcing
+RUN apt-get update && apt full-upgrade
+
+# Update system and install modules from Ubuntu repositories
+RUN apt-get install -y \
+  # 1. Core modules 
+  build-essential locales sudo tmux unzip vim zip \
+  # 2. Networking
+  curl dnsutils ftp iputils-ping netcat net-tools openvpn ssh telnet wget \
+  # 3. Languages
+  golang perl python3 python3-pip \
+  # 4. Scanning
+  dnsenum nmap \
+  # 5. Brute-forcing
   hydra-gtk \
   # Clean package lists
   && rm -rf /var/lib/apt/lists/*
@@ -18,19 +20,17 @@ RUN apt-get update && apt-get full-upgrade -y && apt-get install -y \
 # Setup locales
 RUN localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 
-# Install Go from Google repositories
-RUN curl https://dl.google.com/go/go1.19.5.linux-amd64.tar.gz --output go.tar.gz \
-  && rm -rf /usr/local/go && tar -C /usr/local -xzf go.tar.gz && rm go.tar.gz
-
-# Install packages from Python repositories
+# Install Python modules
 RUN pip install \ 
-  # Scanning
+  # 6. Reverse shell
   pwncat-cs
 
-# Create user, set user password and create or import folders
+# Create user
 RUN useradd -rm -d /home/koala -s /bin/bash -G sudo koala
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN echo 'koala:koala' | chpasswd
+
+# Import config folder
 COPY config/ /home/koala/
 RUN chmod -R 777 /home/koala
 
@@ -41,8 +41,10 @@ WORKDIR /home/koala
 # Install Rust
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
-# Install packages from Go repositories
+# Install Go modules
 ENV GOPATH /home/koala/.go
-RUN /usr/local/go/bin/go install \
-  # Brute-forcing
-  github.com/OJ/gobuster/v3@latest
+RUN \
+  # 1. Scanning
+  go install github.com/ffuf/ffuf@latest; \
+  # 5. Brute-forcing
+  go install  github.com/OJ/gobuster/v3@latest
