@@ -17,45 +17,46 @@
 
 ### 1. Core
 
-- [build-essential](https://packages.ubuntu.com/kinetic/build-essential)
-- [locales](https://packages.ubuntu.com/kinetic/locales)
-- [sudo](https://packages.ubuntu.com/kinetic/sudo)
-- [tmux](https://packages.ubuntu.com/kinetic/tmux)
-- [unzip](https://packages.ubuntu.com/kinetic/unzip)
-- [vim](https://packages.ubuntu.com/kinetic/vim)
-- [zip](https://packages.ubuntu.com/kinetic/zip)
+- [build-essential](https://packages.ubuntu.com/jammy/build-essential)
+- [git](https://packages.ubuntu.com/jammy/git)
+- [locales](https://packages.ubuntu.com/jammy/locales)
+- [sudo](https://packages.ubuntu.com/jammy/sudo)
+- [tmux](https://packages.ubuntu.com/jammy/tmux)
+- [unzip](https://packages.ubuntu.com/jammy/unzip)
+- [vim](https://packages.ubuntu.com/jammy/vim)
+- [zip](https://packages.ubuntu.com/jammy/zip)
 
 ### 2. Networking
 
-- [curl](https://packages.ubuntu.com/kinetic/curl)
-- [dnsutils](https://packages.ubuntu.com/kinetic/dnsutils)
-- [ftp](https://packages.ubuntu.com/kinetic/ftp)
-- [iputils-ping](https://packages.ubuntu.com/kinetic/iputils-ping)
-- [netcat](https://packages.ubuntu.com/kinetic/netcat)
-- [net-tools](https://packages.ubuntu.com/kinetic/net-tools)
-- [openvpn](https://packages.ubuntu.com/kinetic/openvpn)
-- [ssh](https://packages.ubuntu.com/kinetic/ssh)
-- [telnet](https://packages.ubuntu.com/kinetic/telnet)
-- [wget](https://packages.ubuntu.com/kinetic/wget)
+- [curl](https://packages.ubuntu.com/jammy/curl)
+- [dnsutils](https://packages.ubuntu.com/jammy/dnsutils)
+- [ftp](https://packages.ubuntu.com/jammy/ftp)
+- [iputils-ping](https://packages.ubuntu.com/jammy/iputils-ping)
+- [netcat](https://packages.ubuntu.com/jammy/netcat)
+- [net-tools](https://packages.ubuntu.com/jammy/net-tools)
+- [openvpn](https://packages.ubuntu.com/jammy/openvpn)
+- [ssh](https://packages.ubuntu.com/jammy/ssh)
+- [telnet](https://packages.ubuntu.com/jammy/telnet)
+- [wget](https://packages.ubuntu.com/jammy/wget)
 
 ### 3. Languages
 
-- [golang](https://packages.ubuntu.com/kinetic/golang)
-- [perl](https://packages.ubuntu.com/kinetic/perl)
-- [python3](https://packages.ubuntu.com/kinetic/python3)
-- [python3-pip](https://packages.ubuntu.com/kinetic/python3-pip)
+- [golang](https://packages.ubuntu.com/jammy/golang)
+- [perl](https://packages.ubuntu.com/jammy/perl)
+- [python3](https://packages.ubuntu.com/jammy/python3)
+- [python3-pip](https://packages.ubuntu.com/jammy/python3-pip)
 - [rust](https://www.rust-lang.org/)
 
 ### 4. Scanning
 
-- [dnsenum](https://packages.ubuntu.com/kinetic/dnsenum)
+- [dnsenum](https://packages.ubuntu.com/jammy/dnsenum)
 - [ffuf](https://github.com/ffuf/ffuf)
-- [nmap](https://packages.ubuntu.com/kinetic/nmap)
+- [nmap](https://packages.ubuntu.com/jammy/nmap)
 
 ### 5. Brute-forcing
 
 - [gobuster](https://github.com/OJ/gobuster)
-- [hydra-gtk](https://packages.ubuntu.com/kinetic/hydra-gtk)
+- [hydra-gtk](https://packages.ubuntu.com/jammy/hydra-gtk)
 
 ### 6. Reverse shell
 
@@ -65,19 +66,19 @@
 
 ### From Ubuntu repositories
 
-- [aircrack-ng](https://packages.ubuntu.com/kinetic/aircrack-ng)
-- [awscli](https://packages.ubuntu.com/kinetic/awscli)
-- [dmitry](https://packages.ubuntu.com/kinetic/dmitry)
-- [hashcat](https://packages.ubuntu.com/kinetic/hashcat)
-- [john](https://packages.ubuntu.com/kinetic/john)
-- [libldns-dev](https://packages.ubuntu.com/kinetic/libldns-dev)
-- [masscan](https://packages.ubuntu.com/kinetic/masscan)
-- [nikto](https://packages.ubuntu.com/kinetic/nikto)
-- [php](https://packages.ubuntu.com/kinetic/php)
-- [recon-ng](https://packages.ubuntu.com/kinetic/recon-ng)
-- [sqlmap](https://packages.ubuntu.com/kinetic/sqlmap)
-- [wfuzz](https://packages.ubuntu.com/kinetic/wfuzz)
-- [whois](https://packages.ubuntu.com/kinetic/whois)
+- [aircrack-ng](https://packages.ubuntu.com/jammy/aircrack-ng)
+- [awscli](https://packages.ubuntu.com/jammy/awscli)
+- [dmitry](https://packages.ubuntu.com/jammy/dmitry)
+- [hashcat](https://packages.ubuntu.com/jammy/hashcat)
+- [john](https://packages.ubuntu.com/jammy/john)
+- [libldns-dev](https://packages.ubuntu.com/jammy/libldns-dev)
+- [masscan](https://packages.ubuntu.com/jammy/masscan)
+- [nikto](https://packages.ubuntu.com/jammy/nikto)
+- [php](https://packages.ubuntu.com/jammy/php)
+- [recon-ng](https://packages.ubuntu.com/jammy/recon-ng)
+- [sqlmap](https://packages.ubuntu.com/jammy/sqlmap)
+- [wfuzz](https://packages.ubuntu.com/jammy/wfuzz)
+- [whois](https://packages.ubuntu.com/jammy/whois)
 
 ### From GitHub repositories
 

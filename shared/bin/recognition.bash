@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-RECON_DIR=$HOME/tmp/recon
+RECON_DIR=/home/koala/tmp/recon
 
 function log {
   NO_COLOR='\033[0m'
@@ -16,7 +16,9 @@ function log {
   fi
 }
 
-if [ -z $1 ]; then 
+if [[ $(id -u) != 0 ]]; then
+  log "ERROR: This script requires root privileges."
+elif [ -z $1 ]; then 
   log "ERROR: You must pass the target IP address."
 elif ! [[ $1 =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
   log "ERROR: Please specify a valid IP address."
@@ -25,6 +27,6 @@ fi
 TARGET_IP=$1
 log "The target IP address is $TARGET_IP."
 
-sudo mkdir $RECON_DIR
-sudo nmap -v -sS -oN $RECON_DIR/nmap.txt $TARGET_IP
+mkdir $RECON_DIR
+nmap -v -sS -oN $RECON_DIR/nmap.txt $TARGET_IP
 cat $RECON_DIR/nmap.txt

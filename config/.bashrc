@@ -140,5 +140,8 @@ export GOBIN=$GOPATH/bin
 # Export new path with custom binaries.
 export PATH=$PATH:$CARGO_HOME/bin:$GOROOT/bin:$GOBIN
 
+# Create aliases for installed programs.
+alias sublist3r="python /opt/Sublist3r/sublist3r.py"
+
 # Source Cargo environment.
 . "$HOME/.cargo/env"
