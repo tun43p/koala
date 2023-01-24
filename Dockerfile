@@ -5,7 +5,7 @@ RUN apt-get update && apt full-upgrade
 # Update system and install modules from Ubuntu repositories
 RUN apt-get install -y \
   # 1. Core modules 
-  build-essential locales sudo tmux unzip vim zip \
+  build-essential git locales sudo tmux unzip vim zip \
   # 2. Networking
   curl dnsutils ftp iputils-ping netcat net-tools openvpn ssh telnet wget \
   # 3. Languages
@@ -24,6 +24,12 @@ RUN localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 RUN pip install \ 
   # 6. Reverse shell
   pwncat-cs
+
+# Install GitHub modules
+RUN \
+  # 5. Brute-forcing
+  git clone https://github.com/aboul3la/Sublist3r.git /opt/Sublist3r \
+  && cd /opt/Sublist3r && pip install -r requirements.txt
 
 # Create user
 RUN useradd -rm -d /home/koala -s /bin/bash -G sudo koala
