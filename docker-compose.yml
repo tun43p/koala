@@ -11,4 +11,8 @@ services:
       - ./shared/tmp:/home/koala/tmp
     stdin_open: true
     tty: true
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
     command: script log/koala-$DATE.log -c "/bin/bash"
