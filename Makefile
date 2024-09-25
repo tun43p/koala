@@ -1,4 +1,4 @@
-.PHONY: all build clean help update run
+.PHONY: all build down help update run
 
 .DEFAULT_GOAL := all
 
@@ -20,4 +20,4 @@ update:
 	@git checkout main && git pull origin main
 
 run: 
-	@docker compose run --rm koala 
+	@docker compose run --rm koala
