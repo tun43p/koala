@@ -19,10 +19,10 @@
 - [build-essential](https://packages.ubuntu.com/noble/build-essential)
 - [git](https://packages.ubuntu.com/noble/git)
 - [locales](https://packages.ubuntu.com/noble/locales)
+- [neovim](https://packages.ubuntu.com/noble/neovim)
 - [sudo](https://packages.ubuntu.com/noble/sudo)
 - [tmux](https://packages.ubuntu.com/noble/tmux)
 - [unzip](https://packages.ubuntu.com/noble/unzip)
-- [vim](https://packages.ubuntu.com/noble/vim)
 - [zip](https://packages.ubuntu.com/noble/zip)
 
 ### 2. Networking

@@ -5,7 +5,7 @@ RUN apt-get update && apt full-upgrade -y
 # Update system and install modules from Ubuntu repositories
 RUN apt-get install -y \
   # 1. Core modules 
-  build-essential git locales sudo tmux unzip vim zip \
+  build-essential git locales neovim sudo tmux unzip zip \
   # 2. Networking
   curl dnsutils ftp iputils-ping netcat-traditional net-tools openvpn ssh telnet wget \
   # 3. Languages

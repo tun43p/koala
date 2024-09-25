@@ -8,7 +8,7 @@ export DATE
 all: build run
 
 build: 
-	@docker compose --verbose up --build -d
+	@docker compose up --build -d
 
 down: 
 	@docker compose down -v
