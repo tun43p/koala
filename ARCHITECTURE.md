@@ -13,7 +13,7 @@ Folder that contains all the configuration files sent to the machine. **Be caref
 
 ## /shared
 
-Folder that groups all the volumes (folders shared in real time) of the container. **Be careful, if you delete a file from a pa container folder, it will also disappear from the host machine!**
+Folder that groups all the volumes (folders shared in real time) of the container. **Be careful, if you delete a file from the container folder, it will also disappear from the host machine!**
 
 ### /bin
 
