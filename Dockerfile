@@ -25,7 +25,7 @@ RUN useradd -rm -d /home/koala -s /bin/bash -G sudo koala
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN echo 'koala:koala' | chpasswd
 
-# Import config folder
+# Setting up home folder
 COPY config/ /home/koala/
 RUN chmod -R 777 /home/koala
 
@@ -37,8 +37,7 @@ WORKDIR /home/koala
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # Install Python modules
-RUN pipx ensurepath
-RUN \
+RUN pipx ensurepath && \
   # 5. Brute-forcing
   pipx install Sublist3r 
 
