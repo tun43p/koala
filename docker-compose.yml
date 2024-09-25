@@ -7,6 +7,8 @@ services:
     volumes:
       - ./shared/bin:/home/koala/bin
       - ./shared/lib:/home/koala/lib
+      - ./shared/log:/home/koala/log
       - ./shared/tmp:/home/koala/tmp
     stdin_open: true
     tty: true
+    command: script log/koala-$DATE.log -c "/bin/bash"
