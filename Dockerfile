@@ -20,6 +20,11 @@ RUN apt-get install -y \
 # Setup locales
 RUN localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 
+# Setup TUN device
+RUN mkdir -p /dev/net && \
+  mknod /dev/net/tun c 10 200 && \
+  chmod 600 /dev/net/tun
+
 # Create user
 RUN useradd -rm -d /home/koala -s /bin/bash -G sudo koala
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
