@@ -15,4 +15,4 @@ services:
       - NET_ADMIN
     devices:
       - /dev/net/tun
-    command: script log/koala-$DATE.log -c "/bin/bash"
+    command: /bin/bash
