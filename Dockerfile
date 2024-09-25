@@ -1,15 +1,15 @@
 FROM ubuntu:latest
 
-RUN apt-get update && apt full-upgrade
+RUN apt-get update && apt full-upgrade -y
 
 # Update system and install modules from Ubuntu repositories
 RUN apt-get install -y \
   # 1. Core modules 
   build-essential git locales sudo tmux unzip vim zip \
   # 2. Networking
-  curl dnsutils ftp iputils-ping netcat net-tools openvpn ssh telnet wget \
+  curl dnsutils ftp iputils-ping netcat-traditional net-tools openvpn ssh telnet wget \
   # 3. Languages
-  golang perl python3 python3-pip \
+  golang perl python3 pipx\
   # 4. Scanning
   dnsenum nmap \
   # 5. Brute-forcing
@@ -19,17 +19,6 @@ RUN apt-get install -y \
 
 # Setup locales
 RUN localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-
-# Install Python modules
-RUN pip install \ 
-  # 6. Reverse shell
-  pwncat-cs
-
-# Install GitHub modules
-RUN \
-  # 5. Brute-forcing
-  git clone https://github.com/aboul3la/Sublist3r.git /opt/Sublist3r \
-  && cd /opt/Sublist3r && pip install -r requirements.txt
 
 # Create user
 RUN useradd -rm -d /home/koala -s /bin/bash -G sudo koala
@@ -47,10 +36,16 @@ WORKDIR /home/koala
 # Install Rust
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
+# Install Python modules
+RUN pipx ensurepath
+RUN \
+  # 5. Brute-forcing
+  pipx install Sublist3r 
+
 # Install Go modules
 ENV GOPATH /home/koala/.go
 RUN \
   # 1. Scanning
   go install github.com/ffuf/ffuf@latest; \
   # 5. Brute-forcing
-  go install  github.com/OJ/gobuster/v3@latest
+  go install github.com/OJ/gobuster/v3@latest
