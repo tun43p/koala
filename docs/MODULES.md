@@ -30,11 +30,14 @@
 - [curl](https://packages.ubuntu.com/noble/curl)
 - [dnsutils](https://packages.ubuntu.com/noble/dnsutils)
 - [ftp](https://packages.ubuntu.com/noble/ftp)
+- [impacket](https://github.com/fortra/impacket)
 - [iputils-ping](https://packages.ubuntu.com/noble/iputils-ping)
+- [mysql-client](https://packages.ubuntu.com/noble/mysql-client)
+- [mysql-server](https://packages.ubuntu.com/noble/mysql-server)
 - [netcat-traditional](https://packages.ubuntu.com/noble/netcat-traditional)
-- [netifaces](https://pypi.org/project/netifaces/)
 - [net-tools](https://packages.ubuntu.com/noble/net-tools)
 - [openvpn](https://packages.ubuntu.com/noble/openvpn)
+- [smbclient](https://packages.ubuntu.com/noble/smbclient)
 - [ssh](https://packages.ubuntu.com/noble/ssh)
 - [telnet](https://packages.ubuntu.com/noble/telnet)
 - [wget](https://packages.ubuntu.com/noble/wget)
@@ -42,9 +45,11 @@
 ### 3. Languages
 
 - [golang](https://packages.ubuntu.com/noble/golang)
+- [libapache2-mod-php](https://packages.ubuntu.com/noble/libapache2-mod-php)
 - [perl](https://packages.ubuntu.com/noble/perl)
+- [php](https://packages.ubuntu.com/noble/php)
 - [python3](https://packages.ubuntu.com/noble/python3)
-- [python3-pip](https://packages.ubuntu.com/noble/python3-pip)
+- [pipx](https://packages.ubuntu.com/noble/pipx)
 - [rustup](https://www.rust-lang.org/tools/install)
 
 ### 4. Scanning

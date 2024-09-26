@@ -7,9 +7,9 @@ RUN apt-get install -y \
   # 1. Core modules 
   build-essential git locales neovim sudo tmux unzip zip \
   # 2. Networking
-  curl dnsutils ftp iputils-ping netcat-traditional net-tools openvpn ssh telnet wget \
+  curl dnsutils ftp iputils-ping mysql-client mysql-server netcat-traditional net-tools openvpn smbclient ssh telnet wget \
   # 3. Languages
-  golang perl python3 pipx\
+  golang libapache2-mod-php perl php python3 pipx\
   # 4. Scanning
   dnsenum nmap \
   # 5. Brute-forcing
@@ -42,9 +42,11 @@ WORKDIR /home/koala
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # Install Python modules
-RUN pipx ensurepath && \
+RUN pipx ensurepath && pipx install \
+  # 2. Networking
+  impacket && \
   # 5. Brute-forcing
-  pipx install Sublist3r 
+  Sublist3r 
 
 # Install Go modules
 ENV GOPATH /home/koala/.go
