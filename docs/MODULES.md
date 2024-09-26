@@ -3,10 +3,11 @@
 - [Modules](#modules)
   - [Installed modules](#installed-modules)
     - [1. Core](#1-core)
-    - [2. Networking](#2-networking)
-    - [3. Languages](#3-languages)
+    - [2. Languages](#2-languages)
+    - [3. Networking](#3-networking)
     - [4. Scanning](#4-scanning)
     - [5. Brute-forcing](#5-brute-forcing)
+    - [6. Wordlists](#6-wordlists)
   - [Known modules](#known-modules)
     - [From Ubuntu repositories](#from-ubuntu-repositories)
     - [From GitHub repositories](#from-github-repositories)
@@ -16,71 +17,84 @@
 
 ### 1. Core
 
-- [build-essential](https://packages.ubuntu.com/noble/build-essential)
-- [git](https://packages.ubuntu.com/noble/git)
-- [locales](https://packages.ubuntu.com/noble/locales)
-- [neovim](https://packages.ubuntu.com/noble/neovim)
-- [sudo](https://packages.ubuntu.com/noble/sudo)
-- [tmux](https://packages.ubuntu.com/noble/tmux)
-- [unzip](https://packages.ubuntu.com/noble/unzip)
-- [zip](https://packages.ubuntu.com/noble/zip)
+- [build-essential](https://packages.ubuntu.com/noble/build-essential) - _Installed via APT_
+- [git](https://packages.ubuntu.com/noble/git) - _Installed via APT_
+- [locales](https://packages.ubuntu.com/noble/locales) - _Installed via APT_
+- [neovim](https://packages.ubuntu.com/noble/neovim) - _Installed via APT_
+- [sudo](https://packages.ubuntu.com/noble/sudo) - _Installed via APT_
+- [tmux](https://packages.ubuntu.com/noble/tmux) - _Installed via APT_
+- [unzip](https://packages.ubuntu.com/noble/unzip) - _Installed via APT_
+- [zip](https://packages.ubuntu.com/noble/zip) - _Installed via APT_
 
-### 2. Networking
+### 2. Languages
 
-- [curl](https://packages.ubuntu.com/noble/curl)
-- [dnsutils](https://packages.ubuntu.com/noble/dnsutils)
-- [ftp](https://packages.ubuntu.com/noble/ftp)
-- [impacket](https://github.com/fortra/impacket)
-- [iputils-ping](https://packages.ubuntu.com/noble/iputils-ping)
-- [mysql-client](https://packages.ubuntu.com/noble/mysql-client)
-- [mysql-server](https://packages.ubuntu.com/noble/mysql-server)
-- [netcat-traditional](https://packages.ubuntu.com/noble/netcat-traditional)
-- [net-tools](https://packages.ubuntu.com/noble/net-tools)
-- [openvpn](https://packages.ubuntu.com/noble/openvpn)
-- [smbclient](https://packages.ubuntu.com/noble/smbclient)
-- [ssh](https://packages.ubuntu.com/noble/ssh)
-- [telnet](https://packages.ubuntu.com/noble/telnet)
-- [wget](https://packages.ubuntu.com/noble/wget)
+- [default-jre](https://packages.ubuntu.com/noble/default-jre) - _Installed via APT_
+- [golang](https://packages.ubuntu.com/noble/golang) - _Installed via APT_
+- [libapache2-mod-php](https://packages.ubuntu.com/noble/libapache2-mod-php) - _Installed via APT_
+- [maven](https://packages.ubuntu.com/noble/maven) - _Installed via APT_
+- [perl](https://packages.ubuntu.com/noble/perl) - _Installed via APT_
+- [php](https://packages.ubuntu.com/noble/php) - _Installed via APT_
+- [python3-full](https://packages.ubuntu.com/noble/python3-full) - _Installed via APT_
+- [pipx](https://packages.ubuntu.com/noble/pipx) - _Installed via APT_
+- [postgresql](https://packages.ubuntu.com/noble/postgresql) - _Installed via APT_
+- [ruby](https://packages.ubuntu.com/noble/ruby) - _Installed via APT_
+- [rustup](https://www.rust-lang.org/tools/install) - _Installed via sources_
 
-### 3. Languages
+### 3. Networking
 
-- [golang](https://packages.ubuntu.com/noble/golang)
-- [libapache2-mod-php](https://packages.ubuntu.com/noble/libapache2-mod-php)
-- [perl](https://packages.ubuntu.com/noble/perl)
-- [php](https://packages.ubuntu.com/noble/php)
-- [python3](https://packages.ubuntu.com/noble/python3)
-- [pipx](https://packages.ubuntu.com/noble/pipx)
-- [rustup](https://www.rust-lang.org/tools/install)
+- [awscli](https://packages.ubuntu.com/jammy/awscli) - _Installed via sources_
+- [curl](https://packages.ubuntu.com/noble/curl) - _Installed via APT_
+- [dnsutils](https://packages.ubuntu.com/noble/dnsutils) - _Installed via APT_
+- [ftp](https://packages.ubuntu.com/noble/ftp) - _Installed via APT_
+- [impacket](https://github.com/fortra/impacket) - _Installed via PIPX and submodule_
+- [iputils-ping](https://packages.ubuntu.com/noble/iputils-ping) - _Installed via APT_
+- [mysql*](https://packages.ubuntu.com/search?keywords=mysql&searchon=names) - _Installed via APT_
+- [netcat-traditional](https://packages.ubuntu.com/noble/netcat-traditional) - _Installed via APT_
+- [net-tools](https://packages.ubuntu.com/noble/net-tools) - _Installed via APT_
+- [openvpn](https://packages.ubuntu.com/noble/openvpn) - _Installed via APT_
+- [python3-netifaces](https://packages.ubuntu.com/noble/python3-netifaces) - _Installed via APT_
+- [redis-tools](https://packages.ubuntu.com/noble/redis-tools) - _Installed via APT_
+- [smbclient](https://packages.ubuntu.com/noble/smbclient) - _Installed via APT_
+- [ssh](https://packages.ubuntu.com/noble/ssh) - _Installed via APT_
+- [tcpdump](https://packages.ubuntu.com/noble/tcpdump) - _Installed via APT_
+- [telnet](https://packages.ubuntu.com/noble/telnet) - _Installed via APT_
+- [wget](https://packages.ubuntu.com/noble/wget) - _Installed via APT_
 
 ### 4. Scanning
 
-- [dnsenum](https://packages.ubuntu.com/noble/dnsenum)
-- [ffuf](https://github.com/ffuf/ffuf)
-- [nmap](https://packages.ubuntu.com/noble/nmap)
+- [dnsenum](https://packages.ubuntu.com/noble/dnsenum) - _Installed via APT_
+- [ffuf](https://github.com/ffuf/ffuf) - _Installed via Go_
+- [ncat](https://packages.ubuntu.com/noble/ncat) - _Installed via APT_
+- [nmap](https://packages.ubuntu.com/noble/nmap) - _Installed via APT_
+- [sqlmap](https://packages.ubuntu.com/noble/sqlmap)
+- [whois](https://packages.ubuntu.com/noble/whois)
 
 ### 5. Brute-forcing
 
-- [gobuster](https://github.com/OJ/gobuster)
-- [hydra-gtk](https://packages.ubuntu.com/noble/hydra-gtk)
-- [Sublist3r](https://pypi.org/project/Sublist3r/)
+- [evil-winrm](https://github.com/Hackplayers/evil-winrm)-  - _Installed via Ruby_
+- [gobuster](https://github.com/OJ/gobuster) - _Installed via Go_
+- [hydra-gtk](https://packages.ubuntu.com/noble/hydra-gtk) - _Installed via APT_
+- [john](https://packages.ubuntu.com/noble/john) - _Installed via APT_
+- [Responder](https://github.com/lgandx/Responder) - _Installed via submodule_
+- [rogue-jndi](https://github.com/veracode-research/rogue-jndi) - _Installed via submodule_
+- [Sublist3r](https://pypi.org/project/Sublist3r/) - _Installed via PIPX_
+
+### 6. Wordlists
+
+- [SecLists](https://github.com/danielmiessler/SecLists) - _Installed via submodule_
 
 ## Known modules
 
 ### From Ubuntu repositories
 
 - [aircrack-ng](https://packages.ubuntu.com/noble/aircrack-ng)
-- [awscli](https://packages.ubuntu.com/jammy/awscli)
 - [dmitry](https://packages.ubuntu.com/noble/dmitry)
 - [hashcat](https://packages.ubuntu.com/noble/hashcat)
-- [john](https://packages.ubuntu.com/noble/john)
 - [libldns-dev](https://packages.ubuntu.com/noble/libldns-dev)
 - [masscan](https://packages.ubuntu.com/noble/masscan)
 - [nikto](https://packages.ubuntu.com/noble/nikto)
-- [php](https://packages.ubuntu.com/noble/php)
 - [recon-ng](https://packages.ubuntu.com/jammy/recon-ng)
-- [sqlmap](https://packages.ubuntu.com/noble/sqlmap)
 - [wfuzz](https://packages.ubuntu.com/noble/wfuzz)
-- [whois](https://packages.ubuntu.com/noble/whois)
 
 ### From GitHub repositories
 
@@ -92,7 +106,6 @@
 - [massdns](https://github.com/blechschmidt/massdns)
 - [metasploit-framework](https://github.com/rapid7/metasploit-framework)
 - [responder](https://github.com/lgandx/Responder/)
-- [seclists](https://github.com/danielmiessler/SecLists)
 - [teh_s3_bucketeers](https://github.com/tomdev/teh_s3_bucketeers)
 - [wpscan](https://github.com/wpscanteam/wpscan)
 - [xsstrike](https://github.com/s0md3v/XSStrike)
