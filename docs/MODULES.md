@@ -48,6 +48,7 @@
 - [ftp](https://packages.ubuntu.com/noble/ftp) - _Installed via APT_
 - [impacket](https://github.com/fortra/impacket) - _Installed via PIPX and submodule_
 - [iputils-ping](https://packages.ubuntu.com/noble/iputils-ping) - _Installed via APT_
+- [lynx](https://packages.ubuntu.com/noble/lynx) - _Installed via APT_
 - [mysql*](https://packages.ubuntu.com/search?keywords=mysql&searchon=names) - _Installed via APT_
 - [netcat-traditional](https://packages.ubuntu.com/noble/netcat-traditional) - _Installed via APT_
 - [net-tools](https://packages.ubuntu.com/noble/net-tools) - _Installed via APT_

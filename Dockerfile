@@ -2,16 +2,17 @@
 
 FROM ubuntu:latest
 
-RUN apt update && apt full-upgrade -y
+# Set display environment variable
+ENV DISPLAY=host.docker.internal:0.0
 
-# Update system and install modules from Ubuntu repositories
-RUN apt install -y \
+# Update, upgrade and install modules from Ubuntu repositories
+RUN apt update && apt full-upgrade -y && apt install -y \
   # 1. Core modules 
   build-essential git locales neovim sudo tmux unzip zip \
   # 2. Languages
   default-jre golang libapache2-mod-php maven perl php python3-full pipx postgresql ruby \
   # 3. Networking
-  curl dnsutils ftp iputils-ping mysql* netcat-traditional net-tools openvpn python3-netifaces redis-tools smbclient ssh tcpdump telnet wget \
+  curl dnsutils ftp iputils-ping lynx mysql* netcat-traditional net-tools openvpn python3-netifaces redis-tools smbclient ssh tcpdump telnet wget \
   # 4. Scanning
   dnsenum ncat nmap sqlmap whois \
   # 5. Brute-forcing
