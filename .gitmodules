@@ -1,0 +1,12 @@
+[submodule "shared/lib/SecLists"]
+	path = shared/lib/SecLists
+	url = git@github.com:danielmiessler/SecLists.git
+[submodule "shared/lib/impacket"]
+	path = shared/lib/impacket
+	url = https://github.com/fortra/impacket
+[submodule "shared/lib/Responder"]
+	path = shared/lib/Responder
+	url = git@github.com:lgandx/Responder.git
+[submodule "shared/lib/rogue-jndi"]
+	path = shared/lib/rogue-jndi
+	url = https://github.com/veracode-research/rogue-jndi

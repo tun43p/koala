@@ -1,0 +1,16 @@
+services:
+  koala:
+    build: .
+    image: tun43p/koala
+    container_name: koala
+    network_mode: host
+    volumes:
+      - ./shared/bin:/home/koala/bin
+      - ./shared/tmp:/home/koala/tmp
+    stdin_open: true
+    tty: true
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
+    command: /bin/bash
