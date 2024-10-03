@@ -6,7 +6,6 @@ services:
     network_mode: host
     volumes:
       - ./shared/bin:/home/koala/bin
-      - ./shared/lib:/home/koala/lib
       - ./shared/tmp:/home/koala/tmp
     stdin_open: true
     tty: true
